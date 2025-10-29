@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>TimesTableGenerator</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body><!--Comments are for nerds Just look at the Ids-->
+    <div id="controlBox" class="">
+        <h2>Enter size of table here:</h2>
+        <div id="xControls" class="">
+            <span class ="fieldLabel">X Min:</span> <textarea id="tableXmin" name="tableXmin">-50</textarea> 
+            <span class ="fieldLabel">X Max:</span> <textarea id="tableXmax" name="tableXmax">50</textarea>
+        </div>
+        <div id="yControls" class="">
+            <span class ="fieldLabel">Y Min:</span> <textarea id="tableYmin" name="tableYmin">-50</textarea> 
+            <span class ="fieldLabel">Y Max:</span> <textarea id="tableYmax" name="tableYmax">50</textarea>
+        </div>
+        <button onclick="generateTable()" id = "tableButton">Click to generate</button>
+        <div id ="errorMessageDiv" class=""></div> <!--Empty div for targeting with js for error messages-->
+    </div>
+    <script src="js/multiplicationChart.js"></script>
+    <div id="noJs">Please enable JavaScript</div>
+    <div id = "tableBox" class=""></div> <!--Empty div for targeting with JS-->
+</body>

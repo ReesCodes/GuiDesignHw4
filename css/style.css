@@ -1,0 +1,86 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+} 
+th:first-child,
+td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #eaeaea;
+    z-index: 2;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+#controlBox {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+#controlBox h2 {
+    margin-top: 0;
+}
+#controlBox div {
+    margin-bottom: 10px;
+}
+.fieldLabel {
+    font-weight: bold;
+    margin-right: 10px;
+}
+textarea {
+    width: 60px;
+    height: 30px;
+    margin-right: 20px;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: none;
+}
+#tableButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#tableButton:hover {
+    background-color: #45a049;
+}
+#errorMessageDiv {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#tableBox {
+    overflow: auto;
+    max-height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
