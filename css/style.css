@@ -42,6 +42,7 @@ th {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    animation: fadeInDown 0.8s ease-out;
 }
 #controlBox h2 {
     margin-top: 0;
@@ -87,4 +88,42 @@ input[type="number"] {
     border-radius: 5px;
     padding: 10px;
     background-color: #fff;
+    animation: fadeInUp 0.8s ease-out;
+}
+.returnLink {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: normal;
+}
+.returnLink:hover {
+    background-color: #45a049;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
