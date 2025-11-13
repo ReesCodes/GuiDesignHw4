@@ -1,11 +1,11 @@
-# Mulltiplication table generator
+# Mulltiplication table generator part2
 
 Made By Ben
 
 ## Links
 
-[Source Code](https://github.com/ReesCodes/GuiDesignHw3)
-[Try Me](https://reescodes.github.io/GuiDesignHw3/)
+[Source Code](https://github.com/ReesCodes/GuiDesignHw4)
+[Try Me](https://reescodes.github.io/GuiDesignHw4/)
 
 ## Refrences
 
