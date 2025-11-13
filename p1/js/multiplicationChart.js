@@ -2,26 +2,6 @@
    Generates a multiplication chart based on user-defined ranges.
    - Benjamin Tenney (benjamin_tenney@student.uml.edu)
 */
-formValidate = function(data, error)
-{
-    if (isNaN(data.tXmin) || isNaN(data.tXmax) || isNaN(data.tYmin) || isNaN(data.tYmax)) {
-            error.innerHTML = "Please enter valid integers for all fields.";
-            return false;
-        }
-        if (data.tXmin > data.tXmax) {
-            error.innerHTML = "X min must be less than or equal to X max.";
-            return false;
-        }
-        if (data.tYmin > data.tYmax) {
-            error.innerHTML = "Y min must be less than or equal to Y max.";
-            return false;
-        }
-        if (data.tXmax - data.tXmin > 500 || data.tYmax - data.tYmin > 500) {
-            error.innerHTML = "The ranges for both X and Y must not exceed 500.";
-            return false;
-        }
-        return true
-}
 
 generateTable = function()
     {
@@ -72,7 +52,3 @@ generateTable = function()
         tBox.innerHTML=grid;
         return false; // Prevent form submission
     }
-
-window.onload = function() {
-    this.document.getElementById("noJs").style.display = "none"; // Hide the no-JS message if JS is enabled   
-}// when the page loads if JS is enabled
