@@ -26,9 +26,6 @@ generateTable = function()
         data.tYmin = parseInt(data.tYmin);
         data.tYmax = parseInt(data.tYmax);
 
-        // Validate the input
-        if(!formValidate(data, error)) return false;
-        
         // Generate the table
         // Create the header row
         let grid = "<table id=\"multiplicationChart\">" +
