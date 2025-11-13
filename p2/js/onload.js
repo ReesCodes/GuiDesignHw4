@@ -34,7 +34,7 @@ onloadList.push(function () {
         }
 
         return (maxVal - minVal) <= 1000;
-    }, "Max must be no more than 1000 greater than min.");
+    }, "Min must be within 1000 of Max.");
 
     $("#controlBox").validate({
         rules: {
@@ -43,7 +43,7 @@ onloadList.push(function () {
                 number: true,
                 min: -10000,
                 
-                max: function () { // must be <= tableXmax and  
+                max: function () { // must be <= tableXmax 
                     return Math.min(parseFloat($("#tableXmax").val()) || 10000);
                 },
             },
@@ -81,27 +81,29 @@ onloadList.push(function () {
                 required: "Please enter a valid integer between -10000 and 10000.",
                 number: "Please enter a valid integer between -10000 and 10000.",
                 min: "Please enter a valid integer between -10000 and 10000.",
-                max: "X min must be less than or equal to X max."
+                max: "X min must be less than or equal to X max.",
+                maxRange1000: "The difference between X Min and X Max must be less than or equal to 1000.",
             },
             tableXmax: {
                 required: "Please enter a valid integer between -10000 and 10000.",
                 number: "Please enter a valid integer between -10000 and 10000.",
                 min: "X max must be greater than or equal to X min.",
                 max: "Please enter a valid integer between -10000 and 10000.",
-                maxRange1000: "X max must be no more than 1000 greater than X min."
+                maxRange1000: "X Max must be within 1000 of X Min.",
             },
             tableYmin: {
                 required: "Please enter a valid integer between -10000 and 10000.",
                 number: "Please enter a valid integer between -10000 and 10000.",
                 min: "Please enter a valid integer between -10000 and 10000.",
-                max: "Y min must be less than or equal to Y max."
+                max: "Y min must be less than or equal to Y max.",
+                maxRange1000: "Y Min must be within 1000 of Y Max.",
             },
             tableYmax: {
                 required: "Please enter a valid integer between -10000 and 10000.",
                 number: "Please enter a valid integer between -10000 and 10000.",
                 min: "Y max must be greater than or equal to Y min.",
                 max: "Please enter a valid integer between -10000 and 10000.",
-                maxRange1000: "Y max must be no more than 1000 greater than Y min."
+                maxRange1000: "The difference between Y Min and Y Max must be less than or equal to 1000.",
             }
         },
         errorPlacement: function (error, element) {
