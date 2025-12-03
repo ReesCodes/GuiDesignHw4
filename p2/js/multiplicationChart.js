@@ -28,18 +28,18 @@ generateTable = function()
 
         // Generate the table
         // Create the header row
-        let grid = "<table id=\"multiplicationChart\">" +
-            "<th></th>"
+
+        let grid = `<table id="multiplicationChart" class="multiplicationChart" ><tr> <th class="empty"></th>`
         for (let col = data.tXmin; col <= data.tXmax; col++)
         {   
-            grid += "<th>" + col + "</th>";
+            grid += `<th id="c${col}">${col}</th>`;
         }
         grid += "</tr>"
         // Create the data rows
         for (let row = data.tYmin; row <= data.tYmax; row++) {
-            let s = "<tr> <th>"+ row + "</th>";
+            let s = `<tr> <th id="r${row}">${row}</th>`;
             for (let col = data.tXmin; col <= data.tXmax; col++) {
-                s += "<td>" + ( row * col ) + "</td>";
+                s += `<td id="c${col}r${row}">${row * col}</td>`;
             }
             grid += s + "</tr>" 
         }
